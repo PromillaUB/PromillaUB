@@ -1,1 +1,221 @@
-<h1>Denne siden er eid av PromillaUB</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promilla UB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+            margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    background-color: #ee5656;
+    color: white;
+    padding: 10px 0;
+}
+
+nav h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    justify-content:center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header {
+    background-color: #fae6e6;
+    text-align: center;
+    padding: 100px 0;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.feature {
+    text-align: center;
+    margin: 20px;
+}
+
+#spacing {
+    margin-bottom:130px;
+}
+
+#product {
+    width:350px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+
+label {
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    margin-bottom: 16px;
+    padding: 8px;
+}
+
+.btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.featured-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.product {
+            flex: 0 0 calc(33.333% - 20px);
+            margin: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+
+.product:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.product-details {
+    padding: 1em;
+}
+</style>
+<body>
+   
+
+    <nav>
+        <div class="container">
+            
+            <h1>Promilla</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Product</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="container">
+            <img id="product" src="second.png" alt="Feature 1">
+
+            <h2>Promilla UB</h2>
+            <p>Velkommen!</p>
+            <a href="#features" class="btn">Learn More</a>
+        </div>
+    </header>
+
+    <section id="features">
+        <div class="container">
+            <h2>Product</h2>
+            <div class="feature">
+                <img id="product" src="third.png" alt="Feature 1">
+                <h3>Kvalitetsprodukt</h3>
+                <p>En kvalitets promillemåler med en rektangel-formet størrelse, som passer i lomma.</p>
+            </div>
+            <div class="feature">
+                <h3>Digital klokke</h3>              
+                <p>Promillemåleren har en innebygd digital klokke.</p>
+            </div>
+            <div class="feature">
+                <h3>Bruksanvisning</h3>
+                <p>Et klistemerke som viser hva hver av promille-nivåene betyr.</p>
+            </div>
+            
+            
+           
+        </div>
+    </section>
+
+    <section>
+        <h2>Buy Product</h2>
+        <div class="featured-products">
+            <div class="product">
+                <div class="product-details">
+                    <h3>Promilla UB Promillemåler </h3>
+                    <p id="spacing">Første versjonen av Promillemåleren våres. Takk for kjøpet!</p>
+                    <p><strong>Price:</strong> 200 kr</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>Kontakt oss:</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
