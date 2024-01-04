@@ -1,1 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promilla UB</title>
 
+</head>
+<style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+            margin: 0 auto;
+    padding: 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+nav {
+    background-color: #ac1a1a;
+    color: white;
+    padding: 10px 0;
+}
+
+nav h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    justify-content:center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header {
+    background-color: #fae6e6;
+    text-align: center;
+    padding: 100px 0;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.feature {
+    text-align: center;
+    margin: 20px;
+}
+
+#spacing {
+    margin-bottom:130px;
+}
+
+#product {
+    width:350px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.hidden {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+.visible {
+      opacity: 1;
+      transform: translateY(0);
+}
+
+
+label {
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    margin-bottom: 16px;
+    padding: 8px;
+}
+
+.btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.featured-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.product {
+            flex: 0 0 calc(33.333% - 20px);
+            margin: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+
+.product:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.product-details {
+    padding: 1em;
+}
+
+#Centering {
+    text-align: center;
+
+}
+
+.navbar {
+      height: 100vh;
+      width: 200px;
+      background-color: #ac1a1a;
+      position: fixed;
+      top: 0;
+      left: -200px;
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    .navbar a {
+      padding: 16px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #555;
+    }
+
+    .menu-icon {
+      font-size: 30px;
+      cursor: pointer;
+      color: black;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1;
+    }
+
+    #Title {
+        text-align: center;
+    }
+
+    .text-box {
+      position: relative;
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .text-box:before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 10px 10px 0;
+      border-style: solid;
+      border-color: #fff transparent transparent transparent;
+      display: block;
+    }
+
+    .font {
+      margin: 0;
+      color: #333;
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+      text-align: center;
+    }
+</style>
+<body>
+    <div class="menu-icon" onclick="toggleNavbar()">☰</div>
+
+    <div class="navbar" id="navbar">
+      <a href="hom.html">Hjem</a>
+      <a href="hom.html">Produktet</a>
+      <a href="hom.html">Kontakt</a>
+      <a href="forretningside.html">Forretningside</a>
+      <a href="salgsvilkar.html">Salgsvilkår</a>
+      <a href="omoss.html">Om oss</a>
+    </div>
+   
+
+    <nav>
+        <div class="container">
+            
+            <h1 id="Title">Promilla</h1>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="container">
+            
+
+            <h1>Om oss</h1>
+            <p></p>
+        </div>
+    </header>
+
+    <section id="features">
+        <div class="container">
+            <div class="item hidden" id="item1">
+            <h2 id="Centering">Om Promilla UB:</h2>
+            </div>
+            <div class="item hidden" id="item1">
+            <img id="product" src="second.png" alt="Feature 1">
+            </div>
+            <div class="item hidden" id="item1">
+            <div class="text-box">
+                <p class="font">Promilla UB står for at du skal få en tryggere fest.</p>
+                <p class="font">Vi ser et sterkt behov for å forbedre dagens festkultur og vi tror at ved mer kunnskap om alkohol og å gjøre folk mer beviste på hvor mye de drikker er veldig viktig.</p>
+            </div>
+            </div>
+                 
+           
+        </div>
+    </section>
+
+
+    <section id="features">
+        <div  class="item hidden" id="item1">
+        <div class="container">
+            <div class="feature">
+                <h2 id="Centering">Takk for at du velger oss!   </h2>
+            </div>
+            
+            
+           
+        </div>
+        </div>
+    </section> 
+
+
+    <script>
+        function toggleNavbar() {
+          var navbar = document.getElementById('navbar');
+          var menuIcon = document.querySelector('.menu-icon');
+      
+          if (navbar.style.left === '0px' || navbar.style.left === '') {
+            navbar.style.left = '-200px';
+            menuIcon.innerHTML = '☰';
+          } else {
+            navbar.style.left = '0px';
+            menuIcon.innerHTML = '✕';
+          }
+        }
+
+        const items = document.querySelectorAll('.item');
+        
+
+        const observer = new IntersectionObserver(entries => {
+           entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add('visible');
+               }
+           });
+         }, { threshold: 0.5 }); 
+ 
+       items.forEach(item => {
+          observer.observe(item);
+       });
+      </script>
+
+
+</body>
+</html>
